@@ -55,6 +55,7 @@ def main():
     print("Connecting to AW server...")
     client = ActivityWatchClient("aw-from-manictime")
     client.connect()
+
     bucket_name = f"aw-watcher-window_{client.client_hostname}"
     existing_buckets = client.get_buckets()
     if bucket_name not in existing_buckets:
@@ -73,7 +74,6 @@ def main():
     print(f"Loaded {len(rows)} rows from the input CSV.")
     converted_rows = [to_window_event(row) for row in rows]
     print(f"Converted all rows to aw-watcher-window events")
-    print(converted_rows[0])
 
     if (
         input(
