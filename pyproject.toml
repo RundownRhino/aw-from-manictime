@@ -15,10 +15,13 @@ version = "0.1.0"
 description = ""
 authors = ["RundownRhino <52856631+RundownRhino@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "aw_from_manictime"}]
+packages = [{ include = "aw_from_manictime" }]
+scripts = { "aw-from-manictime" = "aw_from_manictime.main:main" }
 
 [tool.poetry.dependencies]
 python = "^3.11"
+aw-client = "^0.5.13"
+tqdm = "^4.66.2"
 
 
 [tool.poetry.group.dev.dependencies]
