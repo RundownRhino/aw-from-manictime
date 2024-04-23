@@ -1,0 +1,16 @@
+# python stuff
+*__pycache__*
+*egg-info*
+.ipynb_checkpoints
+venv
+
+# DB stuff
+*.db
+*.db-journal
+*.sqbpro
+
+# IDE stuff
+.vscode
+
+# Misc stuff
+*.env

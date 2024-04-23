@@ -1,0 +1,31 @@
+[tool.isort]
+profile = "black"
+line_length = 120
+[tool.black]
+line-length = 120
+[tool.ruff]
+line-length = 120
+
+[tool.taskipy.tasks]
+fmt = "isort . && black ."
+
+[tool.poetry]
+name = "aw-from-manictime"
+version = "0.1.0"
+description = ""
+authors = ["RundownRhino <52856631+RundownRhino@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "aw_from_manictime"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.0"
+isort = "^5.13.2"
+taskipy = "^1.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
